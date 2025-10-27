@@ -5,7 +5,7 @@ Antes de rodar, é necessário configurar o arquivo .env.example com as credenci
 
 Abra o arquivo .env.exemplo e preencha o campo "ACCESS_TOKEN" com seu token de acesso obtido ao criar uma conta no gorest.api
 
-Em seguida reenomei a esse arquivo de ".env.exemplo" para ".env" apenas.
+Em seguida renomeie esse arquivo de ".env.exemplo" para ".env" apenas.
 
 **2. Como realizar a instalação:**
 
