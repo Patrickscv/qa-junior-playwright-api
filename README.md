@@ -31,7 +31,7 @@ pip install -r requirements.txt
 
 Instale o Playwright:
 
-playwright install
+pip install playwright
 
 **3. Execução dos Testes**
 
