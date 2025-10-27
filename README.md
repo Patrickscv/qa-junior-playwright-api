@@ -1,5 +1,5 @@
 
-1. Configurando váriaveis de ambiente:
+**1. Configurando váriaveis de ambiente:**
 
 Antes de rodar, é necessário configurar o arquivo .env.example com as credenciais da API:
 
@@ -7,7 +7,7 @@ Abra o arquivo .env.exemplo e preencha o campo "ACCESS_TOKEN" com seu token de a
 
 Em seguida reenomei a esse arquivo de ".env.exemplo" para ".env" apenas.
 
-2. Como realizar a instalação:
+**2. Como realizar a instalação:**
 
 Em seu terminal, navegue até a pasta do projeto:
 
@@ -29,7 +29,7 @@ cd ..
 
 pip install -r requirements.txt
 
-3. Execução dos Testes
+**3. Execução dos Testes**
 
 Na pasta do projeto (cd qa-junior-playwright-api)
 
