@@ -12,6 +12,7 @@ Em seguida renomeie esse arquivo de ".env.exemplo" para ".env" apenas.
 Em seu terminal, navegue até a pasta do projeto:
 
 cd qa-junior-playwright-api
+
 Crie um ambiente virtual:
 
 python -m venv venv
