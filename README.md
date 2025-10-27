@@ -29,6 +29,10 @@ cd ..
 
 pip install -r requirements.txt
 
+Instale o Playwright:
+
+playwright install
+
 **3. Execução dos Testes**
 
 Na pasta do projeto (cd qa-junior-playwright-api)
