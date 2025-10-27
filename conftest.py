@@ -26,8 +26,8 @@ def test_url_token(playwright, test_base_url, test_access_token):
     }
 
     url_full = playwright.request.new_context(
-        base_url = test_base_url,
-        extra_http_headers=headers
+         extra_http_headers=headers,
+        ignore_https_errors=True
     )
 
     yield url_full
