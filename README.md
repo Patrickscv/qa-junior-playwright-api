@@ -1,47 +1,81 @@
 
-**1. Configurando váriaveis de ambiente:**
+# Automação de Testes de API GoRest com Playwright e Python
 
-Antes de rodar, é necessário configurar o arquivo .env.example com as credenciais da API:
+Este repositório contém um framework de automação para testes de API RESTful, focado no serviço **GoRest**. A automação é desenvolvida em **Python** utilizando a biblioteca **Playwright** (`APIRequestContext`).
 
-Abra o arquivo .env.exemplo e preencha o campo "ACCESS_TOKEN" com seu token de acesso obtido ao criar uma conta no gorest.api
+---
 
-Em seguida renomeie esse arquivo de ".env.exemplo" para ".env" apenas.
+### Pré-requisitos
 
-**2. Como realizar a instalação:**
+Certifique-se de ter o **Python 3** e o **pip** instalados em sua máquina.
 
-Em seu terminal, navegue até a pasta do projeto:
+### 1. Configuração do Projeto e Instalação
 
-cd qa-junior-playwright-api
+Siga os passos abaixo para preparar o ambiente de execução:
 
-Crie um ambiente virtual:
+#### **Passo 1: Configurar Variáveis de Ambiente (Token de Acesso)**
 
-python -m venv venv
+O GoRest requer um token de acesso para a maioria das operações (POST, PUT, DELETE).
 
-Ative o ambiente virtual:
+1.  Localize o arquivo `.env.exemplo` na raiz do projeto.
+2.  Abra o arquivo e preencha o campo `ACCESS_TOKEN` com o seu token pessoal, obtido ao criar uma conta no [GoRest API](https://gorest.co.in).
+3.  **Renomeie** o arquivo de `.env.exemplo` para `.env` (apenas).
 
-PowerShell: .\venv\Scripts\Activate.ps1
+#### **Passo 2: Clonar e Navegar**
 
-No Linux e Mac: source venv/bin/activate
+1.  Navegue até a pasta principal do projeto no seu terminal:
+    ```bash
+    cd qa-junior-playwright-api
+    ```
 
-Instale as dependências:
+#### **Passo 3: Configurar o Ambiente Virtual**
 
-Retorne para a pasta principal onde está o requirements.txt
-cd ..
+1.  Crie o ambiente virtual (venv):
+    ```bash
+    python -m venv venv
+    ```
+2.  Ative o ambiente virtual:
+    * **Windows (PowerShell):**
+        ```bash
+        .\venv\Scripts\Activate.ps1
+        ```
+    * **Linux e macOS:**
+        ```bash
+        source venv/bin/activate
+        ```
 
-pip install -r requirements.txt
+#### **Passo 4: Instalar Dependências**
 
-Instale o Playwright:
+1.  Instale todas as bibliotecas Python listadas no `requirements.txt`, incluindo o Playwright:
+    ```bash
+    pip install -r requirements.txt
+    ```
+2.  (Opcional, se o Playwright não estiver no `requirements.txt`):
+    ```bash
+    pip install playwright
+    ```
 
-pip install playwright
+---
 
-**3. Execução dos Testes**
+### 2. Execução dos Testes
 
-Na pasta do projeto (cd qa-junior-playwright-api)
+Certifique-se de que você está na pasta do projeto (`qa-junior-playwright-api`) e com o ambiente virtual **ativado**.
 
-Com o ambiente virtual ativado e o arquivo .env configurado, execute o Pytest:
+| Comando | Descrição |
+| :--- | :--- |
+| `pytest` | Executa **todos** os testes de API. |
+| `pytest --log-cli-level=INFO` | Executa os testes e exibe os **logs** detalhados (incluindo informações de requisição/resposta, se configurado) no terminal. |
+| `pytest -k "nome_do_teste"` | Executa apenas os testes que contêm o texto `"nome_do_teste"` no nome. |
 
-pytest
+---
 
+### 3. Estrutura do Projeto
+
+* `tests/`: Contém os arquivos de teste de API (ex: `test_users.py`, `test_posts.py`).
+* `fixtures/`: Onde podem ser configuradas as *fixtures* do Pytest, como o `APIRequestContext` do Playwright.
+* `utils/`: Módulos com funções de ajuda ou dados de *payloads*.
+* `requirements.txt`: Lista de dependências do Python.
+* `.env`: Arquivo de variáveis de ambiente com o `ACCESS_TOKEN`.
 Para ver os logs de cada teste utilize o comando:
 
 pytest --log-cli-level=INFO
