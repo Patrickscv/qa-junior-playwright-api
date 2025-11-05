@@ -25,7 +25,7 @@ O GoRest requer um token de acesso para a maioria das operações (POST, PUT, DE
 
 1.  Navegue até a pasta principal do projeto no seu terminal:
     ```bash
-    cd qa-junior-playwright-api
+    cd GoRest_API_Automation-main
     ```
 
 #### **Passo 3: Configurar o Ambiente Virtual**
@@ -59,7 +59,7 @@ O GoRest requer um token de acesso para a maioria das operações (POST, PUT, DE
 
 ### 2. Execução dos Testes
 
-Certifique-se de que você está na pasta do projeto (`qa-junior-playwright-api`) e com o ambiente virtual **ativado**.
+Certifique-se de que você está na pasta do projeto (`GoRest_API_Automation-main`) e com o ambiente virtual **ativado**.
 
 | Comando | Descrição |
 | :--- | :--- |
